@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1549519_askit.AskITUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Utils Script Include for the AskIT application.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>AskITUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AskITUtils = Class.create();
+AskITUtils.prototype = {
+    initialize: function() {},
+    isDatePast: function(strDate) {
+        // Create GlideDateTime objects for the current date and the passed in date
+        var rightnow = new GlideDateTime();
+        var testdate = new GlideDateTime(strDate);
+        // If the testdate is before rightnow, return true, else return false
+        if (testdate.before(rightnow)) {
+            return true;
+        } else {
+            return false;
+        }
+    },
+    type: 'AskITUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-24 10:29:20</sys_created_on>
+        <sys_id>8f4c03778315d610595fca96feaad36d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AskITUtils</sys_name>
+        <sys_package display_value="AskIT" source="x_1549519_askit">f97b067f839d9610595fca96feaad392</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AskIT">f97b067f839d9610595fca96feaad392</sys_scope>
+        <sys_update_name>sys_script_include_8f4c03778315d610595fca96feaad36d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-24 10:29:20</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>8f4c03778315d610595fca96feaad36d</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-24 10:29:19</sys_created_on>
+        <sys_id>93cc47378315d610595fca96feaad3ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-24 10:29:19</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
